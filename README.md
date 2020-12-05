@@ -22,7 +22,7 @@ docker-compose up -d
 Laravelをインストールします。
 
 ```shell script
-docker-compose exec -u 1000 bash
+docker-compose exec -u 1000 app bash
 composer create-project --prefer-dist laravel/laravel laravel-app
 cd laravel-app
 chmod -R 770 storage/ bootstrap/cache/
