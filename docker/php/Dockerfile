@@ -11,6 +11,8 @@ RUN apt-get update \
 
 RUN apt-get update \
   && apt-get install -y libpq-dev \
-  && docker-php-ext-install pdo_mysql pdo_pgsql
+  && docker-php-ext-install pdo_mysql pdo_pgsql \
+  && pecl install xdebug-2.9.8 \
+  && docker-php-ext-enable xdebug
 
 WORKDIR /var/www/html
